@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  cd-deploy-test:
+  cd-deploy-uat:
     name: Deploy to TEST
     runs-on: ubuntu-latest
     environment: uat
