@@ -14,7 +14,7 @@ resources:
           depends_on:
             - task_key: 00_wheel_upload
           notebook_task:
-            notebook_path: ../citibike_etl/notebooks/01_bronze/01_bronze_citibike.ipynb
+            notebook_path: ../citibike_etl/notebooks/01_bronze/01_bronze_citibike.ipynb 
             base_parameters:
               pipeline_id: "{{job.id}}"
               run_id: "{{job.run_id}}"
