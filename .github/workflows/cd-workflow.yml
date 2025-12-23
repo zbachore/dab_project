@@ -6,10 +6,10 @@ on:
       - main
 
 jobs:
-  cd-deploy-test:
+  cd-deploy-uat:
     name: Deploy to TEST
     runs-on: ubuntu-latest
-    environment: test
+    environment: uat
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
