@@ -47,8 +47,10 @@ targets:
       dev_flag:
         default: false
     permissions:
-      - user_name: zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com
+      - service_principal_name: 4a54a6ba-8da9-4182-92c1-de9609f29183
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: 4a54a6ba-8da9-4182-92c1-de9609f29183
 
   prod:
     mode: production
@@ -62,6 +64,7 @@ targets:
       dev_flag:
         default: false
     permissions:
-      - user_name: zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com
+      - service_principal_name: adb6f3db-9b2b-49a7-802b-0f01dc415911
         level: CAN_MANAGE
-
+    run_as:
+      service_principal_name: adb6f3db-9b2b-49a7-802b-0f01dc415911
