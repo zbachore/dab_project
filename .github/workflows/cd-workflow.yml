@@ -46,9 +46,9 @@ jobs:
 
   cd-deploy-prod:
     name: Deploy to PROD
-    needs: cd-deploy-test
+    needs: cd-deploy-uat
     runs-on: ubuntu-latest
-    environment: prod
+    environment: prd
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
