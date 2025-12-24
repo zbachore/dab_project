@@ -45,11 +45,11 @@ targets:
         default: "citibike_dev"
       dev_flag:
         default: false
-    # permissions:
-    #   - service_principal_name: 8091b4ff-c722-487b-8a26-3bccfb707177
-    #     level: CAN_MANAGE
-    # run_as:
-    #   service_principal_name: 8091b4ff-c722-487b-8a26-3bccfb707177
+    permissions:
+      - service_principal_name: 8091b4ff-c722-487b-8a26-3bccfb707177
+        level: CAN_MANAGE
+    run_as:
+      service_principal_name: 8091b4ff-c722-487b-8a26-3bccfb707177
 
   test:
     mode: production
