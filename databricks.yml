@@ -18,7 +18,7 @@ variables:
     default: true
 
 targets:
-  personal:
+  DEFAULT:
     # The default target uses 'mode: development' to create a development copy.
     # - Deployed resources get prefixed with '[dev my_user_name]'
     # - Any job schedules and triggers are paused by default.
@@ -33,23 +33,6 @@ targets:
       
     presets:
       artifacts_dynamic_version: true
-
-  dev:
-    mode: production
-    workspace:
-      host: https://adb-7405608847410319.19.azuredatabricks.net
-      # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
-      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
-    variables:
-      catalog:
-        default: "citibike_dev"
-      dev_flag:
-        default: false
-    permissions:
-      - service_principal_name: 8091b4ff-c722-487b-8a26-3bccfb707177
-        level: CAN_MANAGE
-    run_as:
-      service_principal_name: 8091b4ff-c722-487b-8a26-3bccfb707177
 
   test:
     mode: production
