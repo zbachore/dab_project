@@ -6,48 +6,8 @@ on:
       - main
 
 jobs:
-  cd-deploy-dev:
-    name: Deploy to DEV
-    runs-on: ubuntu-latest
-    environment: dev
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install Databricks CLI
-        run: curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
-
-      - name: Install Dependencies
-        run: |
-          pip install --upgrade pip
-          pip install setuptools wheel
-
-      - name: Configure Databricks
-        run: |
-          # write out the profile (here called "DEV")
-          cat <<EOF > ~/.databrickscfg
-          [DEV]
-          host = https://adb-7405608847410319.19.azuredatabricks.net
-          azure_tenant_id = ${{ secrets.AZURE_TENANT_ID }}
-          azure_client_id = ${{ secrets.AZURE_CLIENT_ID }}
-          azure_client_secret = ${{ secrets.AZURE_CLIENT_SECRET }}
-          EOF
-
-      - name: Deploy to DEV
-        run: |
-          databricks bundle deploy \
-            --target dev \
-            --profile DEV
-            
-
   cd-deploy-uat:
     name: Deploy to TEST
-    needs: cd-deploy-dev
     runs-on: ubuntu-latest
     environment: uat
     steps:
