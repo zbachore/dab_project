@@ -26,7 +26,7 @@ targets:
     mode: development
     default: true
     workspace:
-      host: https://adb-7405608847410319.19.azuredatabricks.net
+      host: https://adb-7405617562022785.5.azuredatabricks.net
       
     variables:
       catalog: citibike_dev
@@ -37,7 +37,7 @@ targets:
   test:
     mode: production
     workspace:
-      host: https://adb-7405605014736764.4.azuredatabricks.net
+      host: https://adb-7405610019768460.0.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
@@ -54,7 +54,7 @@ targets:
   prod:
     mode: production
     workspace:
-      host: https://adb-7405616985342471.11.azuredatabricks.net
+      host: https://adb-7405619323269425.5.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
