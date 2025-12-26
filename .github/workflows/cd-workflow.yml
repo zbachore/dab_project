@@ -32,7 +32,7 @@ jobs:
           # write out the profile (here called "TEST")
           cat <<EOF > ~/.databrickscfg
           [TEST]
-          host = https://adb-7405605014736764.4.azuredatabricks.net
+          host = https://adb-7405610019768460.0.azuredatabricks.net
           azure_tenant_id = ${{ secrets.AZURE_TENANT_ID }}
           azure_client_id = ${{ secrets.AZURE_CLIENT_ID }}
           azure_client_secret = ${{ secrets.AZURE_CLIENT_SECRET }}
@@ -71,7 +71,7 @@ jobs:
           # write out the profile (here called "PROD")
           cat <<EOF > ~/.databrickscfg
           [PROD]
-          host = https://adb-7405616985342471.11.azuredatabricks.net
+          host = https://adb-7405619323269425.5.azuredatabricks.net
           azure_tenant_id = ${{ secrets.AZURE_TENANT_ID }}
           azure_client_id = ${{ secrets.AZURE_CLIENT_ID }}
           azure_client_secret = ${{ secrets.AZURE_CLIENT_SECRET }}
