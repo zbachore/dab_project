@@ -56,7 +56,7 @@ jobs:
           host = https://adb-7405610019768460.0.azuredatabricks.net
           azure_tenant_id = ${{ vars.AZURE_TENANT_ID }}   # MODIFIED (secrets -> vars)
           azure_client_id = ${{ vars.AZURE_CLIENT_ID }}   # MODIFIED (secrets -> vars)
-          azure_client_secret = ${{ env.AZURE_CLIENT_SECRET_NAME }}  # MODIFIED (from Key Vault action)
+          azure_client_secret = ${{ env.SKYLINK_SVC_PRINCIPAL_SECRET }}
           EOF
 
       - name: Deploy to TEST
