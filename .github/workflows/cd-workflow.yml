@@ -108,7 +108,7 @@ jobs:
           # write out the profile (here called "PROD")
           cat <<EOF > ~/.databrickscfg
           [PROD]
-          host = https://adb-7405619323269425.5.azuredatabricks.net
+          host = https://adb-7405613358687215.15.azuredatabricks.net
           azure_tenant_id = ${{ vars.AZURE_TENANT_ID }}   # MODIFIED
           azure_client_id = ${{ vars.AZURE_CLIENT_ID }}   # MODIFIED
           azure_client_secret = ${{ env.AZURE_CLIENT_SECRET_NAME }}  # MODIFIED (from Key Vault action)

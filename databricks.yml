@@ -13,9 +13,12 @@ variables:
   catalog:
     description: The catalog to use
     default: "citibike_dev"
+  environment:                          # ✅ ADD THIS
+    description: Environment name for storage account
+    default: "d"
   dev_flag:
     description: Flag to indicate dev environment
-    default: true
+    default: false
 
 targets:
   DEFAULT:
@@ -23,13 +26,17 @@ targets:
     # - Deployed resources get prefixed with '[dev my_user_name]'
     # - Any job schedules and triggers are paused by default.
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
-    mode: development
+    mode: production
     default: true
     workspace:
-      host: https://adb-7405617562022785.5.azuredatabricks.net
+      host: https://adb-7405619352284190.10.azuredatabricks.net
+      root_path: /Workspace/Shared/skylink/
       
     variables:
       catalog: citibike_dev
+      environment:
+        description: Environment name for storage account
+        default: "d" 
       
     presets:
       artifacts_dynamic_version: true
@@ -43,6 +50,7 @@ targets:
     variables:
       catalog:
         default: "citibike_test"
+      environment: "u"  # Add this - for skylinkteastus2datalake
       dev_flag:
         default: false
     permissions:
@@ -54,12 +62,13 @@ targets:
   prod:
     mode: production
     workspace:
-      host: https://adb-7405619323269425.5.azuredatabricks.net
+      host: https://adb-7405613358687215.15.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
       catalog:
         default: "citibike_prod"
+      environment:  "p"
       dev_flag:
         default: false
     permissions:
