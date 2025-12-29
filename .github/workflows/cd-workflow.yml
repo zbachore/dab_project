@@ -53,7 +53,7 @@ jobs:
           # write out the profile (here called "TEST")
           cat <<EOF > ~/.databrickscfg
           [TEST]
-          host = https://adb-7405610019768460.0.azuredatabricks.net/
+          host = https://adb-7405610019768460.0.azuredatabricks.net
           azure_tenant_id = ${{ vars.AZURE_TENANT_ID }}   # MODIFIED (secrets -> vars)
           azure_client_id = ${{ vars.AZURE_CLIENT_ID }}   # MODIFIED (secrets -> vars)
           azure_client_secret = ${{ env.SKYLINK_SVC_PRINCIPAL_SECRET }}
@@ -108,7 +108,7 @@ jobs:
           # write out the profile (here called "PROD")
           cat <<EOF > ~/.databrickscfg
           [PROD]
-          host = https://adb-7405613358687215.15.azuredatabricks.net/
+          host = https://adb-7405613358687215.15.azuredatabricks.net
           azure_tenant_id = ${{ vars.AZURE_TENANT_ID }}   # MODIFIED
           azure_client_id = ${{ vars.AZURE_CLIENT_ID }}   # MODIFIED
           azure_client_secret = ${{ env.AZURE_CLIENT_SECRET_NAME }}  # MODIFIED (from Key Vault action)
