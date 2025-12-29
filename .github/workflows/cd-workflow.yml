@@ -46,7 +46,7 @@ jobs:
         with:
           keyvault: ${{ vars.KEY_VAULT_NAME }}            # MODIFIED (dynamic via env var/Environment var)
           secrets: |
-            ${{ vars.AZURE_CLIENT_SECRET_NAME }}          # MODIFIED (secret name stored as env var)
+            skylink_svc_principal_secret          # MODIFIED (secret name stored as env var)
 
       - name: Configure Databricks
         run: |
