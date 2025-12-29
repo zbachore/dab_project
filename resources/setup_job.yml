@@ -1,0 +1,20 @@
+resources:
+  jobs:
+    setup_catalog: 
+      name: "[${bundle.target}] Setup Catalog"
+      tasks:
+        - task_key: init_catalog
+          notebook_task:
+            notebook_path: ../citibike_etl/setup/init_catalog.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              environment: ${var.environment}
+            source: WORKSPACE
+          job_cluster_key: D4s_v3_sn
+      job_clusters:
+        - job_cluster_key: D4s_v3_sn
+          new_cluster: "${var.D4s_v3_sn}"
+      max_concurrent_runs:  1
+      tags: 
+        environment: ${bundle.target}
+        type: setup
