@@ -11,10 +11,10 @@ permissions:
   contents: read    # MODIFIED
 
 jobs:
-  cd-deploy-uat:
+  cd-deploy-test:
     name: Deploy to TEST
     runs-on: ubuntu-latest
-    environment: uat
+    environment: test
     steps:
       - name: Checkout code
         uses: actions/checkout@v4   # MODIFIED (v3 -> v4)
@@ -67,7 +67,7 @@ jobs:
 
   cd-deploy-prod:
     name: Deploy to PROD
-    needs: cd-deploy-uat
+    needs: cd-deploy-test
     runs-on: ubuntu-latest
     environment: prd
     steps:
