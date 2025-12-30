@@ -102,7 +102,7 @@ jobs:
         run: |
           cat <<EOF > ~/.databrickscfg
           [PROD]
-          host = https://adb-7405610128763595.15.azuredatabricks. net
+          host = https://adb-7405610128763595.15.azuredatabricks.net
           azure_tenant_id = ${{ vars.AZURE_TENANT_ID }}
           azure_client_id = ${{ vars.AZURE_CLIENT_ID }}
           azure_client_secret = ${{ env.SKYLINK-SVC-PRINCIPAL-SECRET }}
