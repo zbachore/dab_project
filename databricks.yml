@@ -55,10 +55,10 @@ targets:
       dev_flag:
         default: false
     permissions:
-      - service_principal_name: 5b096341-5e6d-43bf-b742-6125b11e97aa
+      - service_principal_name: f1a5fcbc-a0bb-46f9-9a4e-c76c18bf5a36
         level: CAN_MANAGE
     run_as:
-      service_principal_name: 5b096341-5e6d-43bf-b742-6125b11e97aa
+      service_principal_name: f1a5fcbc-a0bb-46f9-9a4e-c76c18bf5a36
 
   prod:
     mode: production
@@ -73,10 +73,10 @@ targets:
       dev_flag:
         default: false
     permissions:
-      - service_principal_name: 9a839a61-3e1f-41f5-9cc9-d288da2e0ef1
+      - service_principal_name: d6675f60-dfa0-4a53-9457-f159708dbe87
         level: CAN_MANAGE
     run_as:
-      service_principal_name: 9a839a61-3e1f-41f5-9cc9-d288da2e0ef1
+      service_principal_name: d6675f60-dfa0-4a53-9457-f159708dbe87
 
 
      
