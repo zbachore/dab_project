@@ -20,6 +20,7 @@ variables:
     description: Flag to indicate dev environment
     default: false
 
+
 targets:
   DEFAULT:
     # The default target uses 'mode: development' to create a development copy.
@@ -29,7 +30,7 @@ targets:
     mode: production
     default: true
     workspace:
-      host: https://adb-7405619352284190.10.azuredatabricks.net
+      host: https://adb-7405615715285808.8.azuredatabricks.net
       root_path: /Workspace/Shared/skylink/
       
     variables:
@@ -44,7 +45,7 @@ targets:
   test:
     mode: production
     workspace:
-      host: https://adb-7405610019768460.0.azuredatabricks.net
+      host: https://adb-7405614336867548.8.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
@@ -62,7 +63,7 @@ targets:
   prod:
     mode: production
     workspace:
-      host: https://adb-7405613358687215.15.azuredatabricks.net
+      host: https://adb-7405610128763595.15.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     variables:
