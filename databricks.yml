@@ -47,7 +47,7 @@ targets:
     workspace:
       host: https://adb-7405614336867548.8.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
-      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Workspace/Shared/skylink/
     variables:
       catalog:
         default: "citibike_test"
@@ -65,7 +65,7 @@ targets:
     workspace:
       host: https://adb-7405610128763595.15.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
-      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
+      root_path: /Workspace/Shared/skylink/
     variables:
       catalog:
         default: "citibike_prod"
