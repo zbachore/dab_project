@@ -46,7 +46,7 @@ jobs:
         with:
           keyvault: ${{ vars.KEY_VAULT_NAME }}            # MODIFIED (dynamic via env var/Environment var)
           secrets: |
-            skylink_svc_principal_secret          # MODIFIED (secret name stored as env var)
+            skylink_svc_principal_secret
 
       - name: Configure Databricks
         run: |
@@ -101,7 +101,7 @@ jobs:
         with:
           keyvault: ${{ vars.KEY_VAULT_NAME }}            # MODIFIED
           secrets: |
-            ${{ vars.AZURE_CLIENT_SECRET_NAME }}          # MODIFIED
+            ${{ vars.AZURE_CLIENT_SECRET_NAME }} 
 
       - name: Configure Databricks
         run: |
@@ -111,7 +111,7 @@ jobs:
           host = https://adb-7405610128763595.15.azuredatabricks.net
           azure_tenant_id = ${{ vars.AZURE_TENANT_ID }}   # MODIFIED
           azure_client_id = ${{ vars.AZURE_CLIENT_ID }}   # MODIFIED
-          azure_client_secret = ${{ env.AZURE_CLIENT_SECRET_NAME }}  # MODIFIED (from Key Vault action)
+          azure_client_secret = ${{ env.AZURE_CLIENT_SECRET_NAME }}
           EOF
 
       - name: Deploy to PROD
