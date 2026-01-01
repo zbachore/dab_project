@@ -30,7 +30,7 @@ targets:
     mode: production
     default: true
     workspace:
-      host: https://adb-7405615715285808.8.azuredatabricks.net
+      host: https://adb-7405618929302580.0.azuredatabricks.net
       root_path: /Workspace/Shared/skylink/
       
     variables:
@@ -45,7 +45,7 @@ targets:
   test:
     mode: production
     workspace:
-      host: https://adb-7405614336867548.8.azuredatabricks.net
+      host: https://adb-7405609017722464.4.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/skylink/
     variables:
@@ -55,15 +55,15 @@ targets:
       dev_flag:
         default: false
     permissions:
-      - service_principal_name: f1a5fcbc-a0bb-46f9-9a4e-c76c18bf5a36
+      - service_principal_name: c110fe01-7967-41ac-a4c8-b9225bed7856
         level: CAN_MANAGE
     run_as:
-      service_principal_name: f1a5fcbc-a0bb-46f9-9a4e-c76c18bf5a36
+      service_principal_name: c110fe01-7967-41ac-a4c8-b9225bed7856
 
   prod:
     mode: production
     workspace:
-      host: https://adb-7405610128763595.15.azuredatabricks.net
+      host: https://adb-7405613130773209.9.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/skylink/
     variables:
@@ -73,10 +73,10 @@ targets:
       dev_flag:
         default: false
     permissions:
-      - service_principal_name: d6675f60-dfa0-4a53-9457-f159708dbe87
+      - service_principal_name: b056d4f5-5245-477a-a64c-e4f4e74c85e4
         level: CAN_MANAGE
     run_as:
-      service_principal_name: d6675f60-dfa0-4a53-9457-f159708dbe87
+      service_principal_name: b056d4f5-5245-477a-a64c-e4f4e74c85e4
 
 
      
