@@ -13,7 +13,7 @@ jobs:
   cd-deploy-test: 
     name: Deploy to TEST
     runs-on: ubuntu-latest
-    environment: test
+    environment: u
     steps: 
       - name: Checkout code
         uses: actions/checkout@v4
