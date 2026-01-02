@@ -48,8 +48,8 @@ jobs:
       - name: Configure Databricks
         run: |
           cat <<EOF > ~/.databrickscfg
-          [TEST]
-          host = https://adb-7405609017722464.4.azuredatabricks.net
+          [DEV]
+          host = https://adb-7405618929302580.0.azuredatabricks.net
           azure_tenant_id = ${{ vars.AZURE_TENANT_ID }}
           azure_client_id = ${{ vars.AZURE_CLIENT_ID }}
           azure_client_secret = ${{ env.SKYLINK-SVC-PRINCIPAL-SECRET }}
