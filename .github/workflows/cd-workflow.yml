@@ -63,6 +63,7 @@ jobs:
             --profile DEV
   cd-deploy-test: 
     name: Deploy to TEST
+    needs: cd-deploy-dev
     runs-on: ubuntu-latest
     environment: test
     steps: 
