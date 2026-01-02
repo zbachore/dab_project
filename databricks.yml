@@ -23,24 +23,37 @@ variables:
 
 targets:
   DEFAULT:
-    # The default target uses 'mode: development' to create a development copy.
-    # - Deployed resources get prefixed with '[dev my_user_name]'
-    # - Any job schedules and triggers are paused by default.
-    # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
-    mode: production
+    mode: development
     default: true
     workspace:
       host: https://adb-7405618929302580.0.azuredatabricks.net
-      root_path: /Workspace/Shared/skylink/
+      # DEFAULT now deploys to user's personal folder
+      root_path: ~/. databricks/bundle/${bundle.name}/${bundle.target}
       
     variables:
       catalog: citibike_dev
-      environment:
-        description: Environment name for storage account
-        default: "d" 
+      environment:  "d"
       
     presets:
       artifacts_dynamic_version: true
+
+  dev:
+    mode: production
+    workspace:
+      host: https://adb-7405618929302580.0.azuredatabricks.net
+      # We explicitly deploy to /Workspace/Users/zedbelachew@zbelachewarchitectoutlook.onmicrosoft.com to make sure we only have a single copy.
+      root_path: /Workspace/Shared/skylink/
+    variables:
+      catalog:
+        default: "citibike_dev"
+      environment: "u"  # Add this - for skylinkteastus2datalake
+      dev_flag:
+        default: false
+    permissions:
+      - service_principal_name: 926fc39c-76ae-490f-bbce-482878702ea9
+        level: CAN_MANAGE
+    run_as:
+      service_principal_name: 926fc39c-76ae-490f-bbce-482878702ea9
 
   test:
     mode: production
