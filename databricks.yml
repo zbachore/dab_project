@@ -50,10 +50,10 @@ targets:
       dev_flag:
         default: false
     permissions:
-      - service_principal_name: 926fc39c-76ae-490f-bbce-482878702ea9
+      - service_principal_name: f1868d9a-fe23-42ba-b454-921c048810df
         level: CAN_MANAGE
     run_as:
-      service_principal_name: 926fc39c-76ae-490f-bbce-482878702ea9
+      service_principal_name: f1868d9a-fe23-42ba-b454-921c048810df
 
   test:
     mode: production
@@ -93,3 +93,4 @@ targets:
 
 
      
+
